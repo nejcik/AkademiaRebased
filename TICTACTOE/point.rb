@@ -1,15 +1,15 @@
-class Point
-	attr_accessor :original_value, :x, :y, :symbol
+class Point < Board
+	attr_accessor :original_value, :x, :y, :symbol, :weight
 
-	
 
 	def initialize(value,players_symbol)
 		@original_value=value
 		@symbol = players_symbol
-		set_proper_value(original_value)
+		proper_value(original_value)
+		set_weight(symbol)
 	end
 
-	def set_proper_value(original)
+	def proper_value(original)
 		# implement changing from "A1" to  (1,1)
 		val_x =original[0].ord-64
 		val_y = original[1].to_i
@@ -21,5 +21,18 @@ class Point
 	def change_to_point(previous_value)
 		point_of_vector=2*previous_value-1
 	end
+
+	def set_weight(symbol)
+		if symbol =="X"
+			@weight = 1
+		elsif symbol == "O"
+			@weight = 2
+		else
+			puts "Not a proper symbol"
+		end
+				
+	end
 end
 
+# point=Point.new("B3","X")
+# puts point.weight

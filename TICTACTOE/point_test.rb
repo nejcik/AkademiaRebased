@@ -40,4 +40,9 @@ class PointTest < Minitest::Test
 		point=Point.new("B3","O")
 		refute_equal 2, point.y
 	end
+
+	def test_set_proper_weight
+		point=Point.new("B3","X")
+		assert_equal 1, point.weight
+	end
 end
