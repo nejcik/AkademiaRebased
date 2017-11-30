@@ -5,21 +5,18 @@ class Point < Board
 	def initialize(value,players_symbol)
 		@original_value=value
 		@symbol = players_symbol
-		proper_value(original_value)
+		set_index(original_value)
 		set_weight(symbol)
 	end
 
-	def proper_value(original)
+	def set_indexes(original)
 		# implement changing from "A1" to  (1,1)
-		val_x =original[0].ord-64
-		val_y = original[1].to_i
-
-		@x=change_to_point(val_x)
-		@y=change_to_point(val_y)
+		@x =original[0].ord-65
+		@y = original[1].to_i-1
 	end
 
-	def change_to_point(previous_value)
-		point_of_vector=2*previous_value-1
+	def get_extented_index(index)
+		point_value=2*index-1
 	end
 
 	def set_weight(symbol)
@@ -33,6 +30,3 @@ class Point < Board
 				
 	end
 end
-
-# point=Point.new("B3","X")
-# puts point.weight
