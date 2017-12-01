@@ -2,9 +2,9 @@ class Point
 	attr_accessor :original_value, :x, :y, :symbol, :weight
 
 
-	def initialize(value,players_symbol)
+	def initialize(value,players_symbol=" ")
 		@original_value=value
-		@symbol = players_symbol
+		@symbol = players_symbol.capitalize
 		set_indexes(original_value)
 		set_weight(symbol)
 	end
@@ -15,17 +15,17 @@ class Point
 		@y = original[1].to_i-1
 	end
 
-	def get_extented_index(index)
+	def set_extended_index(index)
 		point_value=2*index+1
 	end
 
-	def set_weight(symbol)
+	def set_weight(symbol=" ")
 		if symbol =="X"
 			@weight = 1
 		elsif symbol == "O"
-			@weight = 2
+			@weight = -1
 		else
-			puts "Not a proper symbol"
+			puts "Wrong symbol"
 		end
 				
 	end
