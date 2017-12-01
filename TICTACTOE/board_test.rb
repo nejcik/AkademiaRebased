@@ -30,3 +30,4 @@ class BoardTest < Minitest::Test
 		assert_equal true, board.is_win		
 	end
 end
+
