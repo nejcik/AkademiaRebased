@@ -34,8 +34,6 @@ class Board
 		y_= point.set_extended_index(point.y)
 		
 		@game_board[x_][y_]=point.symbol
-
-		
 	end
 
 	def is_win(max_size=3)
@@ -105,5 +103,14 @@ class Board
 		end
 
 		win
+	end
+
+	def board_to_show(game_board)
+		game_board.each_index do |i|
+			game_board[i].push("\n")
+		end
+
+		board=game_board.flatten.join
+		
 	end
 end
