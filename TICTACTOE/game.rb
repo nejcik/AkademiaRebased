@@ -145,10 +145,11 @@ class Game
 			puts "Nie ma wygranej!"
 			new_game
 		elsif i==20
-			puts "YAY"
-			players[player_idx].number_of_winnings+=1
-			puts "Gracz: #{players[player_idx].name} ma: #{players[player_idx].number_of_winnings} wygraną/ych"
-			new_game
+			puts "Gracz: #{players[player_idx].name} wygrał!"
+			# puts "YAY"
+			# players[player_idx].number_of_winnings+=1
+			# puts "Gracz: #{players[player_idx].name} ma: #{players[player_idx].number_of_winnings} wygraną/ych"
+			# new_game
 		end
 	end
 
@@ -159,29 +160,6 @@ class Game
 			@player_idx = 0
 		end
 	end
-
-	def new_game
-		y_n=0
-		until y_n ==1 do
-			puts "Nowa partyjka? [Y/N]:"
-			ans=gets
-			ans.delete!("\n")
-			if ans =="Y"
-				y_n=1
-				puts "="*30
-				puts "NOWA ROZGRYWKA"
-				puts "="*30
-				create_board
-				play
-			else
-				y_n=1
-				puts "Okey, koniec gry!"
-				puts "Ostateczny wynik:"
-				puts "Gracz #{players[0].name}: #{players[0].number_of_winnings}"
-				puts "Gracz #{players[1].name}: #{players[1].number_of_winnings}"
-			end
-		end
-	end	
 
 	def check_point_input(point_input)
 		# if properly set
@@ -213,6 +191,30 @@ class Game
 			return 2
 		end
 	end
+
+	# In cale playing multiple times:
+	def new_game
+		y_n=0
+		until y_n ==1 do
+			puts "Nowa partyjka? [Y/N]:"
+			ans=gets
+			ans.delete!("\n")
+			if ans =="Y"
+				y_n=1
+				puts "="*30
+				puts "NOWA ROZGRYWKA"
+				puts "="*30
+				create_board
+				play
+			else
+				y_n=1
+				puts "Okey, koniec gry!"
+				puts "Ostateczny wynik:"
+				puts "Gracz #{players[0].name}: #{players[0].number_of_winnings}"
+				puts "Gracz #{players[1].name}: #{players[1].number_of_winnings}"
+			end
+		end
+	end	
 
 end
 
