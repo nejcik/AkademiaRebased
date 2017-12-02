@@ -24,10 +24,48 @@ class Board
  				end
  			end
  		end
+ 	
+
+		num=1
+		game_board_init.each_index do |i|
+			if i%2 !=0 
+				game_board_init[i].unshift(num)
+				num+=1
+			else
+				game_board_init[i].unshift(" ")	
+			end
+		end
+
+		letters=create_array_with_letters(game_board_init[1].length)
+		game_board_init.unshift(letters)
+
+		game_board_init.each_index do |i|
+			game_board_init[i].push("\n")
+		end
+
+
 		@game_board=game_board_init
 	end
 
+	def create_array_with_letters(len)
+		a_ascii=65
+		
+		
+		alphabet_row=Array.new(len) 
+		alphabet_row.each_index do |i|
+			if i%2 == 0 and i!=0  
+				alphabet_row[i]=a_ascii.chr
+				a_ascii+=1
+			else
+				alphabet_row[i]=" "
+			end
+		end
+		
+	end
+
 	def add_point(point)
+	
+		
 		@points_weights[point.x][point.y]=point.weight
 		
 		x_= point.set_extended_index(point.x)
@@ -40,31 +78,30 @@ class Board
 		sum=0
 
 		# find in rows
-		puts "find in rows"
+
 		points_weights.each_index do |i|
 			points_weights[i].each_index do |j|
 				sum+=points_weights[i][j]	
-			end
+			end 
+			# puts "rows #{sum}" 
 			if check_sum(sum,max_size)
-
-				puts "We have a winner!"
-				return check_sum(sum,max_size)
+				return true
 			end
 			sum=0
 		end
 
 		# find in columns
 
-		puts "find in cols"
+
 		for j in 0..max_size-1
 			for i in 0..max_size-1
 
 				sum+=points_weights[i][j]
 			end
 			
+			# puts "cols #{sum}"
 			if check_sum(sum,max_size)
-				puts "We have a winner!"
-				return check_sum(sum,max_size)
+				return true
 			end
 			sum=0
 		end
@@ -73,11 +110,9 @@ class Board
 		j=0
 		i=0
 		sum=points_weights[i][j]+points_weights[i+1][j+1]+points_weights[i+2][j+2]	
-		
+		# puts "diag1 #{sum}"
 		if check_sum(sum,max_size)
-
-			puts "We have a winner!"
-			return check_sum(sum,max_size)
+			return true
 		end
 		sum=0
 
@@ -85,10 +120,11 @@ class Board
 		j=max_size-1
 		i=0
 		sum=points_weights[i][j]+points_weights[i+1][j-1]+points_weights[i+2][j-2]	
+		# puts "diag2 #{sum}"	
 		
 		if check_sum(sum,max_size)
-			puts "We have a winner!"
-			return check_sum(sum,max_size)
+			
+			return true
 		end
 		sum=0
 
@@ -105,12 +141,10 @@ class Board
 		win
 	end
 
-	def board_to_show(game_board)
-		game_board.each_index do |i|
-			game_board[i].push("\n")
-		end
+	def board_to_show
 
 		board=game_board.flatten.join
 		
 	end
 end
+
