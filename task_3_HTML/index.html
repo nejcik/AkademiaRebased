@@ -2,8 +2,11 @@
 <html>
 	<head>
 		<title>A Web Page</title>
+	
 	</head>
+
 	<body>
+		
 		<!-- NAV BAR -->
 		<nav>
 			<ul> 
@@ -14,42 +17,61 @@
 			</ul>
 			<img src="#" alt="Logo">
 		</nav>
+		
 		<!-- MAIN -->
-			<section>
+		<section>
 			<h1> Welcome to our page! </h1>
 			<p>A paragraph of text. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. </p>
-			<!-- SELECT -->
-			<!-- CHOOSE FROM LIST -->
-			<!-- OPTIONS-->
-			<form>
-				<input type="radio" name="option" value="Option 1"> Option 1<br>
-				<input type="radio" name="option" value="Option 2"> Option 2<br>
-				<input type="radio" name="option" value="Option 2"> Option 3<br>
-			</form>
-			<!-- FORM FIELD-->
-			<form>
-				<input type="text" name="firstname" value="Name">
-				<input type="text" name="address" value="Address">
-				<input type="text" name="phone" value="Phone">
-				<a href="#">?More Information</a>
-			</form>
-			<hr>
-			<p> Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content.</p>
+			
+			<fieldset id="form-1">
+				<legend>Form 1:</legend>
+				
+				<form>
+					<input type="checkbox" name="not_selected" value="not selected">not selected<br>
+					<input type="checkbox" name="selected" value="selected" checked>selected
+				</form>
+								
+				<select id="choose-option">
+					<option hidden disabled selected>Select Option</option> 
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+				</select>
+				
+				<form id="radio-options">
+					<input type="radio" name="option" value="Option 1"> Option 1<br>
+					<input type="radio" name="option" value="Option 2"> Option 2<br>
+					<input type="radio" name="option" value="Option 2"> Option 3<br>
+				</form>
 
-			<form>
-				<input type="submit" name="Submit form">
-			</form>
+				<form id="fields">
+					<input type="text" name="firstname" value="Name">
+					<input type="text" name="address" value="Address">
+					<input type="tel" name="phone" value="Phone">
+					<a href="#">?More Information</a>
+				</form>
+				<hr>
+				<p> Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content.</p>
+
+				<form id="submit-form">
+					<input type="submit" name="Submit form">
+				</form>
+			
+			</fieldset>
 		</section>
+		
 		<!-- SIDE -->
-		<aside>
-			<form>
-				<input type="text" name="search" value="Search something...">
+		<aside id="side">
+			<form id="search-form">
+				<input type="search" name="search" value="Search something...">
 			</form>
-			<ul>
+			
+			<ul id="side-img">
 				<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
 				<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
 				<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
 			</ul>
 		</aside>
+
 	</body>
 </html>
