@@ -18,7 +18,7 @@ class BinaryTree
     array.sort!
 
     if array.empty?
-      # no acton 
+      BinaryTree.new(nil,nil,nil)
     elsif array.length == 1
       BinaryTree.new(nil, nil, array[0])
     else
