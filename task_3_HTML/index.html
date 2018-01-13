@@ -4,80 +4,77 @@
 		<!-- META -->
 		<meta charset="utf-8">
 		<meta name="vievport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 		<!-- PLACE FOR STYLESHEETS/SCRIPS -->
-
 		<!-- TITLE -->
 		<title>A Web Page</title>
 	</head>
-
 	<body>
-		
-		<!-- NAV BAR -->
-		<nav>
-			<ul> 
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Company</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-			<img src="#" alt="Logo">
-		</nav>
-		
-		<!-- MAIN -->
-		<section>
-			<h1> Welcome to our page! </h1>
-			<p>A paragraph of text. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. </p>
-			
-			<fieldset id="form-1">
-				<legend>Form 1:</legend>
+		<article>
+			<header>
+				<!-- NAV BAR -->
+				<nav>
+					<ul> 
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Company</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+					<img src="#" alt="Logo">
+				</nav>
+			</header>
+			<!-- MAIN -->
+			<section>
+				<h1> Welcome to our page! </h1>
+				<p>A paragraph of text. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. Contains information about filling the form. </p>
 				
 				<form>
-					<input type="checkbox" name="not_selected" value="not selected">not selected<br>
-					<input type="checkbox" name="selected" value="selected" checked>selected
-				</form>
-								
-				<select id="choose-option">
-					<option hidden disabled selected>Select Option</option> 
-					<option value="A">A</option>
-					<option value="B">B</option>
-					<option value="C">C</option>
-				</select>
-				
-				<form id="radio-options">
-					<input type="radio" name="option" value="Option 1"> Option 1<br>
-					<input type="radio" name="option" value="Option 2"> Option 2<br>
-					<input type="radio" name="option" value="Option 2"> Option 3<br>
-				</form>
+					<fieldset id="form-1">
+						<legend>Form 1:</legend>
+						
+							
+						<input type="checkbox" name="not_selected" value="not selected" id="not_selected">
+						<label for="not_selected">Not selected</label><br>
+						<input type="checkbox" name="selected" value="selected" id="selected" checked>
+						<label for="selected">selected</label><br>
+														
+						<select id="choose-option">
+							<option hidden disabled selected>Select Option</option> 
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select><br>
+									
+						<input type="radio" name="option" value="Option 1">
+						<label> Option 1</label><br>
+						<input type="radio" name="option" value="Option 2">
+						<label> Option 2</label><br>
+						<input type="radio" name="option" value="Option 2">
+						<label> Option 3</label><br>
+										
+						<input type="text" name="firstname" value="Name">
+						<input type="text" name="address" value="Address">
+						<input type="tel" name="phone" value="Phone">
+						<a href="#">?More Information</a>
 
-				<form id="fields">
-					<input type="text" name="firstname" value="Name">
-					<input type="text" name="address" value="Address">
-					<input type="tel" name="phone" value="Phone">
-					<a href="#">?More Information</a>
-				</form>
-				<hr>
-				<p> Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content.</p>
+						<hr>
+						<p> Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content.</p>
+						<input type="submit" name="Submit form">
 
-				<form id="submit-form">
-					<input type="submit" name="Submit form">
+					</fieldset>
 				</form>
-			
-			</fieldset>
-		</section>
-		
-		<!-- SIDE -->
-		<aside id="side">
-			<form id="search-form">
-				<input type="search" name="search" value="Search something...">
-			</form>
-			
-			<ul id="side-img">
-				<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
-				<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
-				<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
-			</ul>
-		</aside>
-
+			</section>
+			<!-- SIDE -->
+			<aside id="side">
+				<form id="search-form">
+					<input type="search" name="search" value="Search something...">
+				</form>
+				<ul id="side-img">
+					<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
+					<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
+					<li><img src="#" alt="Image"><br>Image description, really interesting things about this image.</li>
+				</ul>
+			</aside>
+		</article>
 	</body>
 </html>
+
