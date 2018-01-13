@@ -12,7 +12,6 @@ run using:
 $ ruby game.rb
 ```
 
-
 ### Task 2: Binary Search Tree create method
 
 [in task_2_BST/]
@@ -21,3 +20,7 @@ run an example:
 ```bash
 $ ruby example.rb
 ```
+
+### Task 3: Html page
+
+open *index.html* from **task_3_HTML** folder.
