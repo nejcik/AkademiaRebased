@@ -13,21 +13,26 @@ class BinaryTree
     @value = value.to_s
   end
 
-  def self.create(array)
-    
-    array.sort!
-
+  def self.create_graph(array)
     if array.empty?
       BinaryTree.new(nil,nil,nil)
     elsif array.length == 1
       BinaryTree.new(nil, nil, array[0])
     else
-      BinaryTree.new(create(array[0...array.length / 2]),
-                    create(array[array.length / 2 + 1..array.length]),
+      BinaryTree.new(create_graph(array[0...array.length / 2]),
+                    create_graph(array[array.length / 2 + 1..array.length]),
                     array[array.length / 2])
     end 
   end
 
+  def self.create(array)
+    
+    array.sort!
+
+    create_graph(array)
+  end
+
+ 
   def generate_graph_tree
     graph = GraphViz.new(:G, type: :graph)
     generate_graph_subtree(graph)
