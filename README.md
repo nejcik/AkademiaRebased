@@ -23,4 +23,9 @@ $ ruby example.rb
 
 ### Task 3: Html page
 
-open *index.html* from **task_3_HTML** folder.
+open: *index.html* from **task_3_HTML** folder.
+
+
+### Task 4: Log in page form
+
+see: https://ns-task4.herokuapp.com
