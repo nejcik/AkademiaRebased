@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.8.0)
-    erubis (2.7.0)
+    digest (0.0.1)
     multi_json (1.12.2)
     mustermann (1.0.1)
     rack (2.0.3)
@@ -26,7 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  erubis
+  digest
   sinatra
   sinatra-contrib
 
