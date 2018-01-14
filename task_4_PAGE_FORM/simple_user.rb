@@ -3,6 +3,7 @@ require 'digest'
 class SimpleUser 
   # private
   attr_accessor :password, :input_password, :salt, :timestamp
+  attr_accessor :current_user 
 
   public
   def initialize()
@@ -11,6 +12,7 @@ class SimpleUser
     @salt = content[0]
     @password = content[1]
     @timestamp = content[2]
+    current_user = false
   end
 
   # Read password from txt file
