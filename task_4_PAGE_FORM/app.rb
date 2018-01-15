@@ -7,7 +7,7 @@ require_relative 'simple_user'
 require_relative 'forgot_password'
 
 
-# class App < Sinatra::Base
+class App < Sinatra::Base
   user = SimpleUser.new
   user.update_password
 
@@ -58,5 +58,4 @@ require_relative 'forgot_password'
       redirect :forgot_password
     end
   end
-
-# end
+end
