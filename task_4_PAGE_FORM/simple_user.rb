@@ -8,12 +8,6 @@ class SimpleUser
 
   public
   def initialize()
-    content = password_from_file
-  
-    @salt = content[0]
-    @password = content[1]
-    @timestamp = content[2]
-    current_user = false
   end
 
   # Read password from txt file
@@ -30,4 +24,14 @@ class SimpleUser
   def check_password(input_string)
     FastSecureCompare.compare(password,change_to_sha512(input_string))
   end
+
+  def update_password()
+    content = password_from_file
+  
+    @salt = content[0]
+    @password = content[1]
+    @timestamp = content[2]
+    current_user = false
+  end
+
 end

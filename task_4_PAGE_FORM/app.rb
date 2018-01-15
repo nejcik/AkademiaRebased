@@ -4,10 +4,12 @@ Bundler.require(:default)
 
 require 'sinatra/reloader'
 require_relative 'simple_user'
+require_relative 'forgot_password'
 
 
-class App < Sinatra::Base
+# class App < Sinatra::Base
   user = SimpleUser.new
+  user.update_password
 
   get '/' do
     if user.current_user 
@@ -40,4 +42,21 @@ class App < Sinatra::Base
       redirect '/'
     end
   end
-end
+
+  get '/forgot_password' do
+    erb :forgot_password
+  end
+
+  post '/changed' do
+    new_password = params[:new_password]
+    check_password = params[:check_password]
+    check = change_password(new_password,check_password)
+    if check == true 
+      user.update_password
+      erb :changed
+    else
+      redirect :forgot_password
+    end
+  end
+
+# end
