@@ -3,6 +3,7 @@ GEM
   specs:
     backports (3.8.0)
     digest (0.0.1)
+    fast_secure_compare (1.0.1)
     multi_json (1.12.2)
     mustermann (1.0.1)
     rack (2.0.3)
@@ -27,6 +28,7 @@ PLATFORMS
 
 DEPENDENCIES
   digest
+  fast_secure_compare
   sinatra
   sinatra-contrib
 

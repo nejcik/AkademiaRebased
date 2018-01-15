@@ -1,4 +1,5 @@
 require 'digest'
+require 'fast_secure_compare/fast_secure_compare'
 
 class SimpleUser 
   # private
@@ -27,6 +28,6 @@ class SimpleUser
   end
 
   def check_password(input_string)
-    password.eql? change_to_sha512(input_string)
+    FastSecureCompare.compare(password,change_to_sha512(input_string))
   end
 end
