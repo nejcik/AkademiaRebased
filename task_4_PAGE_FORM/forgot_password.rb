@@ -24,7 +24,3 @@ def change_password(new_password,password_to_compare)
   end
 end
 
-# user = user.new
-# change_password("lama")
-# File.open("password.txt")each { |line| puts line}
-# user

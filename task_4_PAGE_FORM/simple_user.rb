@@ -2,13 +2,8 @@ require 'digest'
 require 'fast_secure_compare/fast_secure_compare'
 
 class SimpleUser 
-  # private
   attr_accessor :password, :input_password, :salt, :timestamp
   attr_accessor :current_user 
-
-  public
-  def initialize()
-  end
 
   # Read password from txt file
   def password_from_file()
