@@ -1,0 +1,77 @@
+/* MAIN  */
+
+body {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+article {
+	background-color: rgb(247,247,247);
+	margin: 0;
+}
+
+main {
+	background-color: rgb(247,247,247);
+	width: 70%;
+	padding: 1%;
+	float: left;
+}
+
+aside{
+	padding: 1%;
+	overflow: hidden;
+}
+
+.form-and-fig {
+	background-color: white;
+	box-shadow: 2px 4px 8px 02px grey,
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(251, 82, 85);
+}
+
+a:hover {
+	opacity: 0.6;
+}
+/* SPECIFIC */
+
+/* navigation and logo */
+
+
+
+/* main fielsd with form */
+
+#submit {
+	float: right;
+	padding: 1em;
+	background-color: white;
+	border-style: none;
+}
+
+/* "side bar" */
+
+#mySearch {
+	width: 100%;	
+	border-style: none;
+	border-radius: 2em;
+	padding: 1%;
+}
+
+.form-and-fig img {
+	width: 100%;
+}
+.form-and-fig img:hover {
+	opacity: 0.9;
+}
+
