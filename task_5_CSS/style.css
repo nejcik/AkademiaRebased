@@ -1,16 +1,15 @@
 /* MAIN  */
 
 body {
-	background-color: white;
+	background-color: rgb(247,247,247);
 	margin: 0;
 	padding: 0;
 }
 
 article {
-	background-color: rgb(247,247,247);
-	margin: 0;
+	width: 100%;
+	margin-top: 50px;
 }
-
 main {
 	background-color: rgb(247,247,247);
 	width: 70%;
@@ -18,54 +17,145 @@ main {
 	float: left;
 }
 
-aside{
+aside {
 	padding: 1%;
 	overflow: hidden;
 }
 
-.form-and-fig {
-	background-color: white;
-	box-shadow: 2px 4px 8px 02px grey,
-}
-
 ul {
 	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	overflow: hidden;
 }
 
 li {
-	list-style: none;
+	float: left;
 }
 
 a {
 	text-decoration: none;
-	color: rgb(251, 82, 85);
+	color: rgb(89, 2, 4);
+}
+
+li a {
+	padding: 0.3em;
+	display: block;
+	text-align: center;
+
 }
 
 a:hover {
 	opacity: 0.6;
 }
+
+a:visited {
+	color: rgb(255, 80, 85);
+}
+
+
+.form-and-fig {
+	background-color: white;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 1%;
+}
+
 /* SPECIFIC */
 
 /* navigation and logo */
 
+.main-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: table;
+	background-color: white;
+	padding: 0.4em 0.3em;
+}
 
+#menu-links {
+	display: table-cell;
+	vertical-align: middle;
+}
 
-/* main fielsd with form */
+#menu-links li {
+	border-right: 1px solid #000;
+}
+
+#menu-links li:last-child {
+	border-right: none;
+}
+
+#logo {
+	float: right;
+	display: table-cell;
+	padding: 0.5em;
+}
+
+/* main field with form */
+
+.options {
+	width: 50%;
+	padding: 1% 10%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+select {
+	margin: 1.7em 0;
+}
+
+input[type='radio'] {
+   -webkit-appearance: none;
+}
+
+.extras {
+	overflow: hidden;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+input[type=text] {
+    width: 70%;
+    box-sizing: border-box;
+    padding: 1%;
+    margin: 1% 0;
+}
+
+input[type=tel] {
+    width: 70%;
+    box-sizing: border-box;
+    padding: 1%;
+    margin: 1% 0;
+}
+
+.extras a {
+	display: block;
+}
 
 #submit {
 	float: right;
 	padding: 1em;
+	margin-top: 0.5em;
 	background-color: white;
 	border-style: none;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* "side bar" */
+#submit:hover{
+	background-color: rgba(0,0,0,0.05);
+}
+
+
+/* right content */
 
 #mySearch {
 	width: 100%;	
 	border-style: none;
 	border-radius: 2em;
-	padding: 1%;
+	padding: 1.5%;
+	margin: 2% 0;
 }
 
 .form-and-fig img {
