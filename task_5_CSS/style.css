@@ -35,7 +35,7 @@ li {
 
 a {
 	text-decoration: none;
-	color: rgb(89, 2, 4);
+	color: rgb(236, 120, 111);
 }
 
 li a {
@@ -48,11 +48,6 @@ li a {
 a:hover {
 	opacity: 0.6;
 }
-
-a:visited {
-	color: rgb(255, 80, 85);
-}
-
 
 .form-and-fig {
 	background-color: white;
@@ -106,9 +101,6 @@ select {
 	margin: 1.7em 0;
 }
 
-input[type='radio'] {
-   -webkit-appearance: none;
-}
 
 .extras {
 	overflow: hidden;
@@ -132,6 +124,14 @@ input[type=tel] {
 
 .extras a {
 	display: block;
+}
+
+.more-info {
+  padding: 5px 25px;
+  background-position: 5px 50%;
+  background-size: 15px 15px;
+  background-image: url('images/question_mark.png');
+  background-repeat: no-repeat;
 }
 
 #submit {
