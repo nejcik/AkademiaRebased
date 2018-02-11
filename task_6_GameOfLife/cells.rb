@@ -6,7 +6,6 @@ class Cells
     @curr_table = Array.new(size) { Array.new(size) { |i| i = 0}}
     @next_table = Array.new(size) { Array.new(size) }
     @size = size
-    @count_alive = 0
   end
 
   def start
@@ -14,10 +13,9 @@ class Cells
     (size + size/2).times do 
       i = rand(size)
       j = rand(size)
-
-      @curr_table[i][j] = 1
-
+      @curr_table[i][j] = 1    
     end
+    @count_alive = 0
   end
 
   def check_neighbours
@@ -87,7 +85,7 @@ class Cells
       end
     end
     @curr_table = next_table 
-    show_table
+    # show_table
   end
 
   def show_table
@@ -126,10 +124,13 @@ class Cells
   end
 
   def clean
-    @curr_table.each do |curr_t|
-      curr_t.each do |c_t|
-        c_t = 0
-      end
-    end
+    # tu bedzie clean
+    @curr_table = @curr_table.map{ |c_t|
+      c_t.map{ |item|
+        item = 0
+      }
+
+    }
   end
 end
+

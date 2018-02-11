@@ -1,33 +1,33 @@
 <%= erb :header %>
 
-<div class="game">
+   <div class="buttons">
+      <div class="btns-inline">  
+         <div class="btn-next">
+            <form method="POST" action="/">
+                <input type="submit" name="click" value="NEXT ITERATION" class="button">
+            </form>
+          </div>
+          <div class="btn-retart">
+          </div>
+      </div>
+    </div>
   <div class="board">
     <% board.curr_table.each do |tab| %>
-    <p>
+    <p class="board-line">
       <% tab.each do |t| %>
         <% if t == 0 %>
-          <input type="checkbox" class="css-checkbox" id="notSelected" name="check1" value="check1" disabled>
-          <label for="checkbox7" name="checkbox7_lbl" class="css-label lite-x-gray"></label>
+         <!-- <input type="checkbox" class="css-checkbox" id="notSelected" name="check1" value="check1" disabled>
+          <label for="checkbox7" name="checkbox7_lbl" class="css-label lite-x-gray"></label> -->
+          <img src="blank.png">
         <% else %>
-          <input type="checkbox" class="css-checkbox" id="notSelected" name="check1" value="check1" disabled checked>
-          <label for="checkbox7" name="checkbox7_lbl" class="css-label lite-x-gray"></label>
+          <!-- <input type="checkbox" class="css-checkbox" id="notSelected" name="check1" value="check1" disabled checked>
+          <label for="checkbox7" name="checkbox7_lbl" class="css-label lite-x-gray"></label> -->
+        <img src="full.png">
         <% end %>
       <%end%>
     </p>
     <% end %>
-  </div>
-  <div class="side">
-    <div class="descripion">
-      
-    </div>
-    <div class="buttons">
-      <form method="POST" action="/">
-          <p> next iteration </p>
-          <input type="submit" name="click" value="NEXT">
-      </form>
-    </div>
-  </div>
-</div>
-<div>
+  </div>    
+<div class="footer">
   <%= erb :footer %>
 </div>
