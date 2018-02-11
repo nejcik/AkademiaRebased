@@ -7,13 +7,11 @@ class Cells
     @next_table = Array.new(size) { Array.new(size) }
     @size = size
     @count_alive = 0
-
-    start(size)
   end
 
-  def start(size)
+  def start
     # in size random places creating "live" cell
-    size.times do 
+    (2*size).times do 
       i = rand(size)
       j = rand(size)
 
@@ -89,6 +87,7 @@ class Cells
       end
     end
     @curr_table = next_table 
+    show_table
   end
 
   def show_table
@@ -124,10 +123,6 @@ class Cells
     else
       return true
     end
-  end
-
-  def restart_game
-    start
   end
 end
 

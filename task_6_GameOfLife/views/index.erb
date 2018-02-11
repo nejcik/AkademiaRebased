@@ -1,4 +1,10 @@
-<h1>CLICK HERE</h1>
+<h1>GAME OF LIFE</h1>
+
+<% board.curr_table.each do |tab| %>
+   <p><%= tab.join(" ") %></p>
+<% end %>
+
 <form method="POST" action="/">
-  <input type="submit" name="click" value="CLICK HERE">
+    <p> next iteration </p>
+    <input type="submit" name="click" value="NEXT">
 </form>

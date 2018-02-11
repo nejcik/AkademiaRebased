@@ -1,0 +1,19 @@
+<h1>YAY</h1>
+
+
+<% board.curr_table.each do |tab| %>
+   <p><%= tab.join(" ") %></p>
+<% end %>
+
+<% if play == true %>
+  <form method="POST" action="/">
+    <p> next iteration </p>
+    <input type="submit" name="click" value="NEXT">
+  </form>
+<% else %>
+  <p> sorry, we're done! </p>
+  <p> Want to restart? </p>
+  <form method="POST" action="/restart">
+    <input type="submit" name="click" value="restart">
+  </form>
+<% end%>
