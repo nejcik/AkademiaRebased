@@ -88,7 +88,7 @@ class Cells
         @count_alive = 0
       end
     end
-    @curr_table = next_table
+    @curr_table = next_table 
   end
 
   def show_table
@@ -98,7 +98,6 @@ class Cells
   end 
 
   def get_next_cell_state(x,y,count_alive)
-    # print x, y
     if curr_table[x][y].eql? 1
       if count_alive == 2 || count_alive == 3
         @next_table[x][y] =  1
@@ -112,6 +111,23 @@ class Cells
         @next_table[x][y] =  0
       end
     end
+  end
+
+  def check_if_null
+    a = 0
+    @curr_table.each { |c| c.each {|b| a+=b  } }
+    puts "  "
+    puts a   
+    puts "  "
+    if a == 0
+      return false
+    else
+      return true
+    end
+  end
+
+  def restart_game
+    start
   end
 end
 
