@@ -15,7 +15,7 @@ require_relative 'cells'
   post '/' do
     # gameboard.check_neighbours
     gameboard.check_neighbours
-    play_game = gameboard.check_if_null
+    play_game = gameboard.check_if_cleaned
     # puts play_game
     erb :game, :locals => {:board => gameboard, :play => play_game}
   end

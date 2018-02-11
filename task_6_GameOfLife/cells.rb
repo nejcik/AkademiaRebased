@@ -11,7 +11,7 @@ class Cells
 
   def start
     # in size random places creating "live" cell
-    (2*size).times do 
+    (size + size/2).times do 
       i = rand(size)
       j = rand(size)
 
@@ -112,7 +112,7 @@ class Cells
     end
   end
 
-  def check_if_null
+  def check_if_cleaned
     a = 0
     @curr_table.each { |c| c.each {|b| a+=b  } }
     puts "  "
@@ -125,5 +125,3 @@ class Cells
     end
   end
 end
-
-

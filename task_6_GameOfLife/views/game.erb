@@ -1,19 +1,41 @@
-<h1>YAY</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> GAME OF LIFE </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body>
+    <h1>YAY</h1>
 
+   <% board.curr_table.each do |tab| %>
+   <p>
+      <% tab.each do |t| %>
+        <% if t == 0 %>
+          <input type="checkbox" id="notSelected" name="check1" value="check1" disabled>
+        <% else %>
+          <input type="checkbox" id="notSelected" name="check1" value="check1" disabled checked>
+        <% end %>
+      <%end%>
+    </p>
+    <% end %>
 
-<% board.curr_table.each do |tab| %>
-   <p><%= tab.join(" ") %></p>
-<% end %>
+    <% if play == true %>
+      <form method="POST" action="/">
+        <p> next iteration </p>
+        <input type="submit" name="click" value="NEXT">
+      </form>
+    <% else %>
+      <p> sorry, we're done! </p>
+      <p> Want to restart? </p>
+      <form method="POST" action="/restart">
+        <input type="submit" name="click" value="restart">
+      </form>
+    <% end%>
 
-<% if play == true %>
-  <form method="POST" action="/">
-    <p> next iteration </p>
-    <input type="submit" name="click" value="NEXT">
-  </form>
-<% else %>
-  <p> sorry, we're done! </p>
-  <p> Want to restart? </p>
-  <form method="POST" action="/restart">
-    <input type="submit" name="click" value="restart">
-  </form>
-<% end%>
+    <footer>
+      <p class="footer"> Made BY <a href="http://gihub.com/nejcik">nejcik</a></p>
+    </footer>
+  </body>
+</html>
