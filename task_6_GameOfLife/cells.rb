@@ -2,7 +2,7 @@
 class Cells
   attr_accessor :curr_table, :next_table, :size, :count_alive
 
-  def initialize(size = 10)
+  def initialize(size = 25)
     @curr_table = Array.new(size) { Array.new(size) { |i| i = 0}}
     @next_table = Array.new(size) { Array.new(size) }
     @size = size
@@ -122,6 +122,14 @@ class Cells
       return false
     else
       return true
+    end
+  end
+
+  def clean
+    @curr_table.each do |curr_t|
+      curr_t.each do |c_t|
+        c_t = 0
+      end
     end
   end
 end

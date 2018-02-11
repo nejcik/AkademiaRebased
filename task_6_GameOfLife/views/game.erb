@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title> GAME OF LIFE </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-  </head>
-  <body>
-    <h1>YAY</h1>
+<%= erb :header %>
 
-   <% board.curr_table.each do |tab| %>
-   <p>
+<div class="game">
+  <div class="board">
+    <% board.curr_table.each do |tab| %>
+    <p class="board-line">
       <% tab.each do |t| %>
         <% if t == 0 %>
-          <input type="checkbox" id="notSelected" name="check1" value="check1" disabled>
+          <input type="checkbox" class="css-checkbox" id="notSelected" name="check1" value="check1" disabled>
+          <label for="checkbox7" name="checkbox7_lbl" class="css-label lite-x-gray"></label>
         <% else %>
-          <input type="checkbox" id="notSelected" name="check1" value="check1" disabled checked>
+          <input type="checkbox" class="css-checkbox" id="notSelected" name="check1" value="check1" disabled checked>
+          <label for="checkbox7" name="checkbox7_lbl" class="css-label lite-x-gray"></label>
         <% end %>
       <%end%>
     </p>
     <% end %>
-
-    <% if play == true %>
-      <form method="POST" action="/">
-        <p> next iteration </p>
-        <input type="submit" name="click" value="NEXT">
-      </form>
-    <% else %>
-      <p> sorry, we're done! </p>
-      <p> Want to restart? </p>
-      <form method="POST" action="/restart">
-        <input type="submit" name="click" value="restart">
-      </form>
-    <% end%>
-
-    <footer>
-      <p class="footer"> Made BY <a href="http://gihub.com/nejcik">nejcik</a></p>
-    </footer>
-  </body>
-</html>
+  </div>
+  <div class="side">
+    <div class="descripion">
+      
+    </div>
+    <div class="buttons">   
+      <% if play == true %>
+        <form method="POST" action="/">
+          <p> next iteration </p>
+          <input type="submit" name="click" value="NEXT">
+        </form>
+      <% else %>
+        <p> sorry, we're done! </p>
+        <p> Want to restart? </p>
+        <form method="POST" action="/restart">
+          <input type="submit" name="click" value="restart">
+        </form>
+      <% end%>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <%= erb :footer %>
+</div>

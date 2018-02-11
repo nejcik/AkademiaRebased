@@ -1,0 +1,71 @@
+/* CSS */
+
+body {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  background-color: #f3f3f3;
+}
+p {
+  margin: 0;
+}
+/* view */
+
+.game {
+  display: table;
+  width: 100%;
+}
+
+.board-line{
+  background-color: white; 
+}
+
+.board {
+  display: table-cell;
+  width: 60%;
+}
+
+.side {
+  display: table-cell;
+  width: 40%;
+}
+
+
+/* CHECKBOXES */
+
+label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:2px; 
+    width:2px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left:15px;
+  height:15px; 
+  display:inline-block;
+  line-height:15px;
+  background-repeat:no-repeat;
+  background-position: 0 0;
+  font-size:15px;
+  vertical-align:middle;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -15px;
+}
+
+.lite-x-gray{background-image:url(http://csscheckbox.com/checkboxes/lite-x-gray.png);}
+
+/* BUTTONS */

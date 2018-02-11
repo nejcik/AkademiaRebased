@@ -3,11 +3,11 @@ Bundler.require(:default)
 require 'sinatra/reloader'
 require_relative 'cells'
 
-# class App < Sinatra::Base
-
+# class App < Sinatra::Baseset :bind, '0.0.0.0'
   gameboard = Cells.new 
 
   get '/' do
+    gameboard.clean
     gameboard.start
     erb :index, :locals => {:board => gameboard}
   end
