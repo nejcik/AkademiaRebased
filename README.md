@@ -24,3 +24,10 @@ $ ruby example.rb
 ### Task 3: Html page
 
 open *index.html* from **task_3_HTML** folder.
+
+
+... place for other tasks info ...
+
+### Task 6: Game of Life 
+
+link here: https://safe-hollows-68592.herokuapp.com
