@@ -1,0 +1,43 @@
+<%= erb :header %>
+
+<div class="buttons"> 
+    <div class="btns-inline">  
+    <% if play == true %>
+      <div class="btn">
+        <form method="POST" action="/">
+          <input type="submit" name="click0" value="NEXT ITERATION" class="button" id="next">
+        </form>
+      </div>
+      <div class="btn">
+        <form method="POST" action="/restart">
+          <input type="submit" name="click1" value="    RESET?    " class="button" id="reset">
+        </form>
+      </div>
+    </div>
+    <% else %>
+    <div class="btn-restart">
+      <p><b> Sorry, we're done! </b></p>
+      <p> Want to restart? </p>
+      <form method="POST" action="/restart">
+        <input type="submit" name="click2" value="RESTART" class="button">
+      </form>
+    </div>
+    <% end%>
+</div>
+<div class="board">
+  <% board.curr_table.each do |tab| %>
+  <p class="board-line">
+    <% tab.each do |t| %>
+      <% if t == 0 %>
+        <img src="blank.png">
+      <% else %>
+        <img src="full.png">
+      <% end %>
+    <%end%>
+  </p>
+  <% end %>
+</div>
+
+<div class="footer">
+  <%= erb :footer %>
+</div>
